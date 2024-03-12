@@ -1,1 +1,1 @@
-Apáti Rebeka (UJGWAT) - Adatbázisok (gyakorlatok, gyakorló feladatok, zh-k)
+Apáti Rebeka (UJGWAT) - Adatbázisok (gyakorlatok, gyakorló feladatok, házik, zh-k)
