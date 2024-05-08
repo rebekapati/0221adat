@@ -1,0 +1,74 @@
+> SET eletkor
+"ERR wrong number of arguments for 'set' command"
+
+> SET eletkor 26
+"OK"
+
+> GET eletkor
+"26"
+
+> EXPIRE eletkor 100
+(integer) 1
+
+> RPUSH nevek juci laci maci 
+(integer) 3
+
+> LPUSH maci laci juci
+(integer) 2
+
+> LRANGE nevek 0 -1
+1) "juci"
+2) "laci"
+3) "maci"
+
+> HSET tanulo08 nev "Nagy Ivo" neptunkod xxx888 hianyzas 3
+(integer) 3
+
+> HGETALL tanulo08
+1) "nev"
+2) "Nagy Ivo"
+3) "neptunkod"
+4) "xxx888"
+5) "hianyzas"
+6) "3"
+
+> SADD tantargyak Adatbazisok Programozas Matematika
+(integer) 3
+
+
+Connecting...
+
+Pinging Redis server on redis-19975.c274.us-east-1-3.ec2.redns.redis-cloud.com:19975
+Connected.
+Ready to execute commands.
+
+
+> SADD vizsgatargy Programozas Matematika
+(integer) 2
+
+> SUNION tt vizsgatargy
+1) "Programozas"
+2) "Matematika"
+
+> ZADD eredmenyek 50 laci 70 juci 10 maci
+(integer) 3
+
+> ZRANGE eredmenyek
+"ERR wrong number of arguments for 'zrange' command"
+
+> ZRANGE eredmenyek 1 -1
+1) "laci"
+2) "juci"
+
+> ZRANGE eredmenyek 0 -1
+1) "maci"
+2) "laci"
+3) "juci"
+
+> ZRANGE eredmenyek 0 -1 withscores
+1) "maci"
+2) "10"
+3) "laci"
+4) "50"
+5) "juci"
+6) "70"
