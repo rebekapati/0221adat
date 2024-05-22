@@ -1,0 +1,34 @@
+soronként viszek fel egy táblát:
+12.
+> HSET dolgozo:1 nev "Nagy Eva" munkakor titkarno
+(integer) 2
+
+> HSET dolgozo:2 nev "Kiss Ilona" munkakor konyvelo
+(integer) 2
+
+13.
+> HSET projekt:1:1 projektnev "EURO-33"
+(integer) 1
+
+> HSET projekt:3:2 projektnev "TRANS-22"
+(integer) 1
+
+oszloponként viszek fel egy táblát:
+> ZADD dolgozo:nev 1 "Nagy Éva" 2 "Kiss Ilona"
+(integer) 2
+
+> ZADD dolgozo:munkakor 1 titkarno 2 konyvelo
+(integer) 2
+
+mezőnként (cellánként):
+> SET dolgozo:1:nev "Nagy Éva"
+"OK"
+
+> SET dolgozo:2:nev "Kiss Ilona"
+"OK"
+
+> SET dolgozo:1:munkakor titkarno
+"OK"
+
+> SET dolgozo:2:munkakor konyvelo
+"OK"
